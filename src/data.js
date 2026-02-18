@@ -1,8 +1,8 @@
 import {makeIndex} from "./lib/utils.js";
 
 export function initData(sourceData) {
-    const sellers = makeIndex(sourceData.sellers, 'id', v => `${v.first_name} ${v.last_name}`);
-    const customers = makeIndex(sourceData.customers, 'id', v => `${v.first_name} ${v.last_name}`);
+    let sellers = makeIndex(sourceData.sellers, 'id', v => `${v.first_name} ${v.last_name}`);
+    let customers = makeIndex(sourceData.customers, 'id', v => `${v.first_name} ${v.last_name}`);
     let lastResult;
     let lastQuery;
 
